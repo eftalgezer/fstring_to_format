@@ -2,6 +2,7 @@
 Module bundling all functions needed to convert f-strings to .format()
 """
 from __future__ import print_function
+from __future__ import unicode_literals
 import re
 import glob
 import shutil
