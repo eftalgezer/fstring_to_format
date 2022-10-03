@@ -11,7 +11,7 @@ MPATH = mfile.replace("/fstring_to_format/__init__.py", "")
 
 def test_main():
     """Tests for __main__.py"""
-    os.chdir("{0}{1}tests{1}assets".format(MPATH, os.sep))
+    os.chdir("{0}{1}tests{1}assets".format(MPATH, os.sep).replace("fstring_to_formatc", "fstring_to_format"))
     assert "All files are converted" in main_tester("fstring_to_format file1.py.test")
 
 
