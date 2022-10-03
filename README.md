@@ -3,14 +3,14 @@
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/fstring_to_format.svg)](https://pypi.python.org/pypi/fstring_to_format/)
 [![Python package](https://github.com/eftalgezer/fstring_to_format/actions/workflows/python-package.yml/badge.svg)](https://github.com/eftalgezer/fstring_to_format/actions/workflows/python-package.yml)
 [![codecov](https://codecov.io/gh/eftalgezer/fstring_to_format/branch/main/graph/badge.svg?token=Q9TJFIN1U1)](https://codecov.io/gh/eftalgezer/fstring_to_format)
-[![Codacy Badge](4)](https://www.codacy.com/gh/eftalgezer/fstring_to_format/dashboard?utm_source=github.com&utm_medium=referral&utm_content=eftalgezer/fstring_to_format&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3bec71a96f374f24b26b077619350f30)](https://www.codacy.com/gh/eftalgezer/fstring_to_format/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eftalgezer/fstring_to_format&amp;utm_campaign=Badge_Grade)
 [![PyPI download month](https://img.shields.io/pypi/dm/fstring_to_format.svg)](https://pypi.python.org/pypi/fstring_to_format/)
 [![PyPI download week](https://img.shields.io/pypi/dw/fstring_to_format.svg)](https://pypi.python.org/pypi/fstring_to_format/)
 [![PyPI download day](https://img.shields.io/pypi/dd/fstring_to_format.svg)](https://pypi.python.org/pypi/fstring_to_format/)
 ![GitHub all releases](https://img.shields.io/github/downloads/eftalgezer/fstring_to_format/total?style=flat)
 [![GitHub contributors](https://img.shields.io/github/contributors/eftalgezer/fstring_to_format.svg)](https://github.com/eftalgezer/fstring_to_format/graphs/contributors/)
 [![CodeFactor](https://www.codefactor.io/repository/github/eftalgezer/fstring_to_format/badge)](https://www.codefactor.io/repository/github/eftalgezer/fstring_to_format)
-[![Codacy Badge]()](https://www.codacy.com/gh/eftalgezer/fstring_to_format/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eftalgezer/fstring_to_format&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/3bec71a96f374f24b26b077619350f30)](https://www.codacy.com/gh/eftalgezer/fstring_to_format/dashboard?utm_source=github.com&utm_medium=referral&utm_content=eftalgezer/fstring_to_format&utm_campaign=Badge_Coverage)
 [![PyPI license](https://img.shields.io/pypi/l/fstring_to_format.svg)](https://pypi.python.org/pypi/fstring_to_format/)
 
 fstring_to_format makes the GIF file from a given chemical ANI file.
