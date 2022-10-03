@@ -6,6 +6,7 @@ from __future__ import unicode_literals
 import re
 import glob
 import shutil
+import io
 
 MAINPATTERN = re.compile(r"f['\"]\S*\{[^\{\s}]+\}+\S*['\"]")
 PARTPATTERN = re.compile(r"\{[^\{\}\s]+\}")
@@ -24,7 +25,7 @@ def formatify(path):
     for file in files:
         print("Backing up the files")
         shutil.copy(file, "{0}.temp".format(file))
-        with open(file, "r+", encoding="utf-8") as f:
+        with io.open(file, "r+", encoding="utf-8") as f:
             print("Opening {0}".format(file))
             content = f.read()
             matches = MAINPATTERN.findall(content)
