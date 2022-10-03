@@ -21,4 +21,4 @@ def main_tester(command):
 
 def unique_tester(list1):
     """Tester function for unique"""
-    return unique()
+    return unique(list1)
