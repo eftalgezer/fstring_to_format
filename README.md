@@ -1,4 +1,5 @@
 # fstring_to_format
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d620ebb7f2ec4ecba0144a39592b57f2)](https://app.codacy.com/gh/eftalgezer/fstring_to_format?utm_source=github.com&utm_medium=referral&utm_content=eftalgezer/fstring_to_format&utm_campaign=Badge_Grade_Settings)
 [![PyPI version](https://badge.fury.io/py/fstring_to_format.svg)](https://badge.fury.io/py/fstring_to_format)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/fstring_to_format.svg)](https://pypi.python.org/pypi/fstring_to_format/)
 [![Python package](https://github.com/eftalgezer/fstring_to_format/actions/workflows/python-package.yml/badge.svg)](https://github.com/eftalgezer/fstring_to_format/actions/workflows/python-package.yml)
