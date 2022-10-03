@@ -22,7 +22,7 @@ setup(
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
-        "Intended Audience :: Information Technology"
+        "Intended Audience :: Information Technology",
         "Topic :: Software Development",
         "Topic :: Utilities",
         "Typing :: Typed",
