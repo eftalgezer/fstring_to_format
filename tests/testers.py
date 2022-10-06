@@ -4,6 +4,7 @@ Unit testers for the fstring_to_format package.
 from __future__ import absolute_import
 import io
 import sys
+import os
 from fstring_to_format import __file__ as mfile
 from fstring_to_format.core import unique
 
