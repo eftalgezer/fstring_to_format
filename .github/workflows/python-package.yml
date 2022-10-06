@@ -56,7 +56,3 @@ jobs:
       with:
         project-token: ${{ secrets.codacy_token }}
         coverage-reports: coverage.xml
-    - name: See coverage
-      run: |
-          cd /home/runner/work/fstring_to_format/fstring_to_format/
-          ls
