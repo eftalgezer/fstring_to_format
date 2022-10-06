@@ -56,7 +56,7 @@ jobs:
       uses: codacy/codacy-coverage-reporter-action@v1
       with:
         project-token: ${{ secrets.codacy_token }}
-        coverage-reports: /home/runner/work/fstring_to_format/fstring_to_format/coverage.xml
+        coverage-reports: coverage.xml
     - name: See coverage
       run: |
           cd /home/runner/work/fstring_to_format/fstring_to_format/
