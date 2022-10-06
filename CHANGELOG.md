@@ -1,3 +1,10 @@
+## [v0.1.1](https://github.com/eftalgezer/ANIAnimator/tree/v0.1.1) (2022-10-07)
+
+Bug fix
+
+**Full Changelog**: https://github.com/eftalgezer/fstring_to_format/compare/v0.1.0...v0.1.1
+
+
 ## [v0.1.0](https://github.com/eftalgezer/fstring_to_format/tree/v0.1.0) (2022-10-03)
 
 Initial release

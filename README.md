@@ -13,7 +13,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/3bec71a96f374f24b26b077619350f30)](https://www.codacy.com/gh/eftalgezer/fstring_to_format/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eftalgezer/fstring_to_format&amp;utm_campaign=Badge_Grade)
 [![PyPI license](https://img.shields.io/pypi/l/fstring_to_format.svg)](https://pypi.python.org/pypi/fstring_to_format/)
 
-fstring-to-format converts Python f-string expressions to .format() for backwards compatibility. 
+fstring_to_format converts Python f-string expressions to .format() for backwards compatibility. 
 
 There are other packages for this too, but this is a regular expression based cleaner solution.
 

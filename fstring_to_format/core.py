@@ -7,8 +7,9 @@ import re
 import glob
 import shutil
 import io
+import os
 
-MAINPATTERN = re.compile(r"f['\"]\S*\{[^\{\s}]+\}+\S*['\"]")
+MAINPATTERN = re.compile(r"f['\"].*\{[^\{\s}]+\}+.*['\"]")
 PARTPATTERN = re.compile(r"\{[^\{\}\s]+\}")
 
 
@@ -22,26 +23,30 @@ def unique(list1):
 
 def formatify(path):
     files = glob.glob(path)
-    for file in files:
-        print("Backing up the files")
-        shutil.copy(file, "{0}.temp".format(file))
-        with io.open(file, "r+", encoding="utf-8") as f:
-            print("Opening {0}".format(file))
-            content = f.read()
-            matches = MAINPATTERN.findall(content)
-            for match in matches:
-                parts = unique(PARTPATTERN.findall(match))
-                toreplace = match
-                for ind, part in enumerate(parts):
-                    toreplace = toreplace.replace(part, "{" + str(ind) + "}").lstrip("f")
-                toreplace += ".format("
-                for part in parts:
-                    toreplace += "{0}, ".format(part.strip("{").strip("}"))
-                toreplace = toreplace.rstrip(", ") + ")"
-                content = content.replace(match, toreplace)
-            f.seek(0)
-            f.truncate(0)
-            print("Writing {0}".format(file))
-            f.write(content)
-            f.close()
-    print("All files are converted")
+    files = [file for file in files if os.path.isfile(file)]
+    if not files:
+        print("No files are found")
+    else:
+        for file in files:
+            print("Backing up {0}".format(file))
+            shutil.copy(file, "{0}.temp".format(file))
+            with io.open(file, "r+", encoding="utf-8") as f:
+                print("Opening {0}".format(file))
+                content = f.read()
+                matches = MAINPATTERN.findall(content)
+                for match in matches:
+                    parts = unique(PARTPATTERN.findall(match))
+                    toreplace = match
+                    for ind, part in enumerate(parts):
+                        toreplace = toreplace.replace(part, "{" + str(ind) + "}").lstrip("f")
+                    toreplace += ".format("
+                    for part in parts:
+                        toreplace += "{0}, ".format(part.strip("{").strip("}"))
+                    toreplace = toreplace.rstrip(", ") + ")"
+                    content = content.replace(match, toreplace)
+                f.seek(0)
+                f.truncate(0)
+                print("Writing {0}".format(file))
+                f.write(content)
+                f.close()
+        print("All files are converted")
