@@ -6,7 +6,7 @@ import os
 from fstring_to_format import __file__ as mfile
 from .testers import main_tester, unique_tester
 
-MPATH = mfile.replace("/fstring_to_format/__init__.py", "").replace("fstring_to_formatc", "fstring_to_format")
+MPATH = mfile.replace("{0}fstring_to_format{0}__init__.py".format(os.sep), "").replace("fstring_to_formatc", "fstring_to_format")
 
 
 def test_main():
