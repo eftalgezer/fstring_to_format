@@ -2,17 +2,17 @@
 Setup file for fstring_to_format
 """
 from __future__ import absolute_import
-import pathlib
+import pathlib2
 from setuptools import setup
 
 
-HERE = pathlib.Path(__file__).parent.resolve()
+HERE = pathlib2.Path(__file__).parent.resolve()
 
 LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="fstring_to_format",
-    version="0.1.1",
+    version="0.1.2",
     description="fstring_to_format converts Python f-string expressions to .format() for backwards compatibility.",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
