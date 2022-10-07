@@ -12,7 +12,7 @@ LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="fstring_to_format",
-    version="0.1.2",
+    version="0.1.1",
     description="fstring_to_format converts Python f-string expressions to .format() for backwards compatibility.",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
