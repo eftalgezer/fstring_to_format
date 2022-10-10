@@ -2,13 +2,17 @@
 Setup file for fstring_to_format
 """
 from __future__ import absolute_import
-import pathlib2 as pathlib
+from __future__ import with_statement
+import os
 from setuptools import setup
+import io
 
+HERE = os.getcwd().replace("{0}setup.py".format(os.sep), "")
 
-HERE = pathlib.Path(__file__).parent.resolve()
+LONG_DESCRIPTION = None
 
-LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
+with io.open("{0}{1}README.md".format(HERE, os.sep), "r", encoding="utf-8") as readme:
+    LONG_DESCRIPTION = readme.read()
 
 setup(
     name="fstring_to_format",
