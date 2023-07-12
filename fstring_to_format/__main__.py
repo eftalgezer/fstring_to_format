@@ -1,3 +1,6 @@
+"""
+fstring_to_format terminal client
+"""
 import sys
 from .core import formatify
 
