@@ -3,7 +3,7 @@ Unit tests for the fstring_to_format package.
 """
 import os
 from fstring_to_format import __file__ as mfile
-from .tester import main_tester, unique_tester
+from .testers import main_tester, unique_tester
 
 MPATH = os.path.dirname(mfile)
 
