@@ -5,7 +5,6 @@ import io
 import os
 import sys
 from fstring_to_format import __file__ as mfile
-from fstring_to_format.core import unique
 
 MPATH = os.path.dirname(mfile)
 
@@ -17,7 +16,3 @@ def main_tester(command):
     rtmain(args=command.split(" "))
     sys.stdout = sys.__stdout__
     return capturedoutput.getvalue()
-
-def unique_tester(list1):
-    """Tester function for unique"""
-    return unique(list1)
