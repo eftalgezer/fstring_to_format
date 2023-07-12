@@ -9,6 +9,6 @@ MPATH = os.path.dirname(mfile)
 
 def test_main():
     """Tests for __main__.py"""
-    os.chdir(os.path.join("tests", "assets"))
+    os.chdir(os.path.join(MPATH, "tests", "assets"))
     assert "All files are converted" in main_tester("fstring_to_format file*.py.test")
     assert "No files are found" in main_tester("fstring_to_format Foo.py.test")
