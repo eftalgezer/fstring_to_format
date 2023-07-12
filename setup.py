@@ -1,17 +1,15 @@
 """
 Setup file for fstring_to_format
 """
-from __future__ import absolute_import
-from __future__ import with_statement
 import os
 from setuptools import setup
 import io
 
-HERE = os.getcwd().replace("{0}setup.py".format(os.sep), "")
+HERE = os.path.dirname(os.path.abspath(__file__))
 
 LONG_DESCRIPTION = None
 
-with io.open("{0}{1}README.md".format(HERE, os.sep), "r", encoding="utf-8") as readme:
+with io.open(os.path.join(HERE, "README.md"), "r", encoding="utf-8") as readme:
     LONG_DESCRIPTION = readme.read()
 
 setup(
@@ -47,14 +45,15 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
-    ],
+],
     keywords="f-string, fstring, format, f-string to format converter, fstring to format converter",
     packages=["fstring_to_format"],
     install_requires=[],
     project_urls={
-        "Bug Reports": "https://github.com/eftalgezer/fstring_to_format/issues",
-        "Source": "https://github.com/eftalgezer/fstring_to_format/",
-        "Blog": "https://beyondthearistotelian.blogspot.com/search/label/fstring_to_format",
-        "Developer": "https://www.eftalgezer.com/",
-    },
+    "Bug Reports":
+"https://github.com/eftalgezer/fstring_to_format/issues",
+"Source": "https://github.com/eftalgezer/fstring_to_format/",
+"Blog": "https://beyondthearistotelian.blogspot.com/search/label/fstring_to_format",
+"Developer": "https://www.eftalgezer.com/",
+},
 )
