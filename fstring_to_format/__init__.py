@@ -2,8 +2,6 @@
 fstring_to_format converts Python f-string expressions to .format() for backwards compatibility
 """
 
-from __future__ import absolute_import
-
 # meta
 __title__ = "fstring_to_format"
 __author__ = "Eftal Gezer"
