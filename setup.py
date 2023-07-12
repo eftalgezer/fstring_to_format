@@ -45,15 +45,14 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
-],
+    ],
     keywords="f-string, fstring, format, f-string to format converter, fstring to format converter",
     packages=["fstring_to_format"],
     install_requires=[],
     project_urls={
-    "Bug Reports":
-"https://github.com/eftalgezer/fstring_to_format/issues",
-"Source": "https://github.com/eftalgezer/fstring_to_format/",
-"Blog": "https://beyondthearistotelian.blogspot.com/search/label/fstring_to_format",
-"Developer": "https://www.eftalgezer.com/",
-},
+        "Bug Reports": "https://github.com/eftalgezer/fstring_to_format/issues",
+        "Source": "https://github.com/eftalgezer/fstring_to_format/",
+        "Blog": "https://beyondthearistotelian.blogspot.com/search/label/fstring_to_format",
+        "Developer": "https://www.eftalgezer.com/",
+    },
 )
