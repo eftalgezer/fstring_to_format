@@ -1,5 +1,6 @@
 import io
 import os
+import sys
 from fstring_to_format import __file__ as mfile
 from fstring_to_format.core import unique
 
