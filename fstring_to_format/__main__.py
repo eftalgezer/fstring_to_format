@@ -1,12 +1,12 @@
 import sys
 from .core import formatify
 
-def main():
+def main(args):
     """Main function"""
-    if len(sys.argv) < 2:
+    if len(args) < 2:
         print("Path argument is missing")
         return
-    formatify(sys.argv[1])
+    formatify(args[1])
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv)
