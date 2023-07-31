@@ -47,8 +47,9 @@ jobs:
       uses: codecov/codecov-action@v3.1.4
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        directory: ./coverage/reports/
         env_vars: OS,PYTHON
-        files: ./coverage.xml
+        files: /home/runner/work/fstring_to_format/fstring_to_format/coverage.xml
         flags: tests
     - name: Upload testing report to Codacy
       uses: codacy/codacy-coverage-reporter-action@v1
