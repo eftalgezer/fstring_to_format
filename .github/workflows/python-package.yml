@@ -47,12 +47,23 @@ jobs:
       uses: codecov/codecov-action@v3.1.4
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./coverage/reports/
         env_vars: OS,PYTHON
-        files: /home/runner/work/fstring_to_format/fstring_to_format/coverage.xml
+        files: ./coverage.xml
         flags: tests
-    - name: Upload testing report to Codacy
-      uses: codacy/codacy-coverage-reporter-action@v1
-      with:
-        project-token: ${{ secrets.codacy_token }}
-        coverage-reports: coverage.xml
+    - name: Pushing reports to Codacy (Windows)
+      if: "startsWith(matrix.os, 'windows')"
+      run: |
+            git clone https://github.com/codacy/codacy-coverage-reporter.git
+            cd codacy-coverage-reporter
+            sbt assembly
+            $jar = Convert-Path ../codacy-coverage-reporter/target/codacy-coverage-reporter-assembly-*.jar
+            java -jar $jar report -r ../coverage.xml --project-token ${{secrets.CODACY_TOKEN}}
+    - name: Pushing reports to Codacy (others)
+      if: "!startsWith(matrix.os, 'windows')"
+      run: |
+            export CODACY_PROJECT_TOKEN=${{secrets.CODACY_TOKEN}}
+            LATEST_VERSION="$(curl -Ls https://artifacts.codacy.com/bin/codacy-coverage-reporter/latest)"
+            curl -Ls -o codacy-coverage-reporter-assembly.jar "https://artifacts.codacy.com/bin/codacy-coverage-reporter/${LATEST_VERSION}/codacy-coverage-reporter-assembly.jar"
+            java -jar codacy-coverage-reporter-assembly.jar report -r coverage.xml
+
+
