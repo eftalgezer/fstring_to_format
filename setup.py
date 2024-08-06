@@ -14,7 +14,7 @@ with io.open(os.path.join(HERE, "README.md"), "r", encoding="utf-8") as readme:
 
 setup(
     name="fstring_to_format",
-    version="0.1.2",
+    version="0.1.3",
     description="fstring_to_format converts Python f-string expressions to .format() for backwards compatibility.",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
@@ -45,6 +45,9 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
     ],
     keywords="f-string, fstring, format, f-string to format converter, fstring to format converter",
     packages=["fstring_to_format"],
